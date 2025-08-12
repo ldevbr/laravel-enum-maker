@@ -1,0 +1,25 @@
+<?php
+
+namespace {{ namespace }};
+
+use Filament\Support\Contracts\HasColor;
+use Filament\Support\Contracts\HasLabel;
+
+enum {{ class }}: {{ backedType }} implements HasLabel, HasColor
+{
+{{ cases }}
+
+    public function getLabel(): ?string
+    {
+        return match ($this) {
+{{ labelMatch }}
+        };
+    }
+
+    public function getColor(): string|array|null
+    {
+        return match ($this) {
+{{ colorMatch }}
+        };
+    }
+}
