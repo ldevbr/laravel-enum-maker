@@ -1,6 +1,6 @@
 <?php
 
-namespace Ldevbr\EnumMaker\Console;
+namespace Ldevbr\LaravelEnumMaker\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;

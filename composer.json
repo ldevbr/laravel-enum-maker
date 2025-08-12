@@ -9,13 +9,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Ldevbr\\EnumMaker\\": "src/"
+            "Ldevbr\\LaravelEnumMaker\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ldevbr\\EnumMaker\\EnumServiceProvider"
+                "Ldevbr\\LaravelEnumMaker\\EnumServiceProvider"
             ]
         }
     }
