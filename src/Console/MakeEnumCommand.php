@@ -66,7 +66,7 @@ class MakeEnumCommand extends GeneratorCommand
             } else {
                 $caseLines = $items->map(
                     fn($c) =>
-                    "    case " . Str::upper(Str::snake($c)) . " = '" . Str::slug($c, '_') . "';"
+                    "    case " . Str::upper(Str::snake($c)) . " = '" . Str::upper(Str::slug($c, '_')) . "';"
                 )->implode(PHP_EOL);
             }
 
