@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class MakeEnumCommand extends GeneratorCommand
 {
-    protected $signature = 'make:enum
+    protected $signature = 'make:lm-enum
         {name : The name of the enum}
         {--backed=string : Backed type: string or int}
         {--cases= : Comma separated case names}
@@ -20,12 +20,12 @@ class MakeEnumCommand extends GeneratorCommand
 
     protected function getStub()
     {
-        $published = base_path('stubs/vendor/enum-maker/' . ($this->option('filament') ? 'enum-filament.stub' : 'enum.stub'));
+        $published = base_path('stubs/vendor/enum-maker/' . ($this->option('filament') ? 'lm-enum-filament.stub' : 'lm-enum.stub'));
         if (file_exists($published)) {
             return $published;
         }
 
-        return __DIR__ . '/../../stubs/' . ($this->option('filament') ? 'enum-filament.stub' : 'enum.stub');
+        return __DIR__ . '/../../stubs/' . ($this->option('filament') ? 'lm-enum-filament.stub' : 'lm-enum.stub');
     }
 
     protected function getDefaultNamespace($rootNamespace)

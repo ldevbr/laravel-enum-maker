@@ -13,8 +13,8 @@ class EnumServiceProvider extends ServiceProvider
             $this->commands([MakeEnumCommand::class]);
 
             $this->publishes([
-                __DIR__ . '/../stubs/enum.stub' => base_path('stubs/vendor/enum-maker/enum.stub'),
-                __DIR__ . '/../stubs/enum-filament.stub' => base_path('stubs/vendor/enum-maker/enum-filament.stub'),
+                __DIR__ . '/../stubs/lm-enum.stub' => base_path('stubs/vendor/enum-maker/lm-enum.stub'),
+                __DIR__ . '/../stubs/lm-enum-filament.stub' => base_path('stubs/vendor/enum-maker/lm-enum-filament.stub'),
             ], 'enum-maker-stubs');
         }
     }
